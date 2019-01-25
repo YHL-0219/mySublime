@@ -1,0 +1,19 @@
+
+{
+    "encoding": "utf-8",
+    "working_dir": "$file_path",
+    "shell_cmd": "g++ -std=c++14 \"$file_name\" -llog4cpp -lpthread -lboost_system -lboost_thread -lboost_filesystem -I/usr/local/include/boost -L/usr/local/lib -o \"$file_base_name\"",
+    "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+    "selector": "source.c++",
+ 
+    "variants": 
+    [
+        {    
+        "name": "Run",
+        "shell_cmd": "g++ -std=c++14 '$file' -llog4cpp -lpthread -lboost_system -lboost_filesystem -I/usr/local/include/boost -L/usr/local/lib  -o '$file_base_name' && gnome-terminal -x bash -c \"'${file_path}/${file_base_name}';read -p '\n\nYHL make it !'\""
+        }
+    ]
+}
+
+
+// -lboost_system -I/usr/local/include/boost -L/usr/local/lib -lboost_thread -pthread

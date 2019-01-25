@@ -1,0 +1,15 @@
+{
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"dictionary": "Packages/Language - English/en_GB.dic",
+	"font_size": 11,
+	"ignored_packages":
+	[
+		"AutoPEP8",
+		"Package Control",
+		"Scala",
+		"SQL",
+		"Vintage",
+		"XML"
+	],
+	"theme": "Material-Theme.sublime-theme"
+}

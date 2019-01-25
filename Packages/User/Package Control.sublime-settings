@@ -1,0 +1,21 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"All Autocomplete",
+		"Anaconda",
+		"AutoPEP8",
+		"C++ Snippets",
+		"FileIcons",
+		"JavaIME",
+		"MasmAssembly",
+		"Material Theme",
+		"One Dark Color Scheme",
+		"Package Control",
+		"SideBarEnhancements",
+		"SublimeLinter"
+	]
+}

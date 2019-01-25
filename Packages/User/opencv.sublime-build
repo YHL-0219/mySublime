@@ -1,0 +1,29 @@
+{
+    "encoding": "utf-8" ,
+    "working_dir": "$file_path",
+    "shell_cmd": "g++ -std=c++14 \"$file_name\" -llog4cpp -lpthread -lboost_system -lpython3 -o \"$file_base_name\" `pkg-config --cflags --libs opencv`",
+    "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+    "selector": "source.c++, source.hpp, source.c, source.cc",
+ 
+    "variants": 
+    [
+        {    
+        "name": "Run",
+        "shell_cmd": "g++ -std=c++14 '$file' -llog4cpp -lpthread -lboost_system -o '$file_base_name' `pkg-config --cflags --libs opencv` && gnome-terminal -x bash -c \"'${file_path}/${file_base_name}';read -p '\n\nYHL make it !'\""
+        }
+    ]
+}
+
+// {
+//     "shell_cmd": "g++ -std=c++14 \"${file}\" -o  \"${file_path}/${file_base_name}\" `pkg-config --cflags --libs opencv` ",
+//     "working_dir": "${file_path}",
+//     "selector": "source.cc, source.cpp, source.hpp, source.h",
+ 
+//     "variants":
+//     [
+//         {
+//             "name": "Run",
+//             "shell_cmd": "g++ -std=c++14 \"${file}\" -o \"${file_path}/${file_base_name}\" `pkg-config --cflags --libs opencv`&& \"${file_path}/${file_base_name}\""
+//         }
+//     ]
+// }

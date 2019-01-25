@@ -1,0 +1,15 @@
+{
+    "encoding": "utf-8",
+    "working_dir": "$file_path",
+    "shell_cmd": "g++ -g -std=c++14\"$file_name\" -lmysqlclient -llog4cpp -lpthread -lboost_system -lboost_filesystem -o \"$file_base_name\"",
+    "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+    "selector": "source.c++ source.c source.hpp source.cc",
+ 
+    "variants": 
+    [
+        {    
+	        "name": "Run",
+	        "shell_cmd": "g++ -g -std=c++14 '$file' -lmysqlclient -llog4cpp -lpthread -lboost_system -lboost_filesystem -o '$file_base_name' && gnome-terminal -x bash -c \"'${file_path}/${file_base_name}';read -p '\nYHL make it !'\""
+        }
+    ]
+}
